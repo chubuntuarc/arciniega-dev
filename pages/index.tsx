@@ -49,9 +49,8 @@ const Home = () => {
               <br />
               In 2020 I move to a new job and learned a lot more about Shopify,
               and I started with React and Next (I understood React thanks to
-              nextJS :swea:, here the goal was to migrate from Shopify to
-              headless commerce, using Contenfult, a cool experience, a lot of
-              learning.
+              nextJS 🤓, here the goal was to migrate from Shopify to headless
+              commerce, using Contenfult, a cool experience, a lot of learning.
               <br />
               <br />I continue working with Shopify with a personal client from
               Spain, where I did lot of fixes and updates, and we started with a
