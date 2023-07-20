@@ -23,7 +23,7 @@ const Home = () => {
       </Grid>
       <Grid sm={8} xs={12} css={{ padding: "1rem 4rem" }}>
         <Text size={20} weight="bold">
-          Hi! I'm Jesus, and I love to do software solutions, my focus is
+          Hi! I&apos;m Jesus, and I love to do software solutions, my focus is
           frontend using NextJS/ReactJS and CSS/SCSS looking for a good job
           paying attention to detail.
           <br />
@@ -62,7 +62,7 @@ const Home = () => {
               and organizing my work.
               <br />
               <br />
-              And that's me, always looking for new stuff to learn and cool
+              And that&apos;s me, always looking for new stuff to learn and cool
               projects to be involved.
               <br />
               <br />

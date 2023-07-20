@@ -1,6 +1,7 @@
+import { AppProps } from "next/app";
 import { createTheme, NextUIProvider } from "@nextui-org/react";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   const theme = createTheme({
     type: "dark", // it could be "light" or "dark"
     theme: {
