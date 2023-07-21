@@ -1,8 +1,5 @@
 import { Grid, Text } from "@nextui-org/react";
-import Flexfits from './Flexfits'
-import FITB from "./FITB";
-import Eddi from "./Eddi";
-import WFR from "./WFR";
+import PortfolioCard from "./PortfolioCard";
 
 const Portfolio = () => {
   return (
@@ -20,16 +17,16 @@ const Portfolio = () => {
         </Text>
       </Grid>
       <Grid sm={6}>
-        <Eddi />
+        <PortfolioCard company="Eddi" />
       </Grid>
       <Grid sm={6} xs={12}>
-        <Flexfits />
+        <PortfolioCard company="Flex" />
       </Grid>
       <Grid sm={6}>
-        <FITB />
+        <PortfolioCard company="FITB" />
       </Grid>
       <Grid sm={6}>
-        <WFR />
+        <PortfolioCard company="WFR" />
       </Grid>
     </Grid.Container>
   );
