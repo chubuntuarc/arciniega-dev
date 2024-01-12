@@ -26,6 +26,13 @@ const companiesData = {
     thumbnail: "/flex.png",
     url: "https://www.flexfits.com/",
   },
+  SWF: {
+    altText: "SWF card",
+    description: "Shopify Development and Managment.",
+    name: "Sola Wood Flowers",
+    thumbnail: "/swf.png",
+    url: "https://solawoodflowers.com/",
+  },
   WFR: {
     altText: "WFR card",
     description: "Shopify store frontend development.",

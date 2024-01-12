@@ -60,6 +60,10 @@ const Home = () => {
               and applications, where I learned more about reading requirements
               and organizing my work.
               <br />
+              <br /> Now working as a Senior Frontend Engineer improving the
+              store details and performance, implementing customizations to
+              manage custom options using metafields + metaobjects in Shopify.
+              <br />
               <br />
               And that&apos;s me, always looking for new stuff to learn and cool
               projects to be involved.
