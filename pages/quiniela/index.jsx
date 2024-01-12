@@ -43,6 +43,7 @@ function Quiniela() {
     <div>
       <h1>Jornada {round} - Liga MX</h1>
       {matches && <MatchesTable matches={matches} />}
+      <hr />
       <h2>Tabla general</h2>
       {standings && <StangingsTable standings={standings} />}
     </div>
