@@ -1,4 +1,4 @@
-import { Table, Image } from '@nextui-org/react';
+import { Table, Image, Text } from '@nextui-org/react';
 
 const StangingsTable = (data) => {
   const standings = data?.standings ? Object.entries(data.standings.slice(18, 35)) : null;
@@ -17,19 +17,19 @@ const StangingsTable = (data) => {
     },
     {
       key: "matches",
-      label: "Jugados",
+      label: "JJ",
     },
     {
       key: "won",
-      label: "Ganados",
+      label: "JG",
     },
     {
       key: "drawn",
-      label: "Empatados",
+      label: "JE",
     },
     {
       key: "lost",
-      label: "Perdidos",
+      label: "JP",
     },
     {
       key: "goals_scored",
@@ -45,7 +45,7 @@ const StangingsTable = (data) => {
     },
     {
       key: "points",
-      label: "Puntos",
+      label: "PS",
     },
   ];
 
@@ -56,6 +56,7 @@ const StangingsTable = (data) => {
         css={{
           height: "auto",
           minWidth: "100%",
+          padding: 0,
           '.clasified': {
             color: '#2eff2e'
           },
@@ -80,24 +81,23 @@ const StangingsTable = (data) => {
               const logoURL = `/teams/${team_id}.png`
               return (
                 <Table.Row key={key}>
-                  <Table.Cell><span className={parseInt(rank) < 5 ? "clasified" : parseInt(rank) < 13 ? "playin" : ""}>{rank}</span></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }} className={parseInt(rank) < 5 ? "clasified" : parseInt(rank) < 13 ? "playin" : ""}>{rank}</Text></Table.Cell>
                   <Table.Cell>
                     <Image
                       src={logoURL}
                       alt="Default Image"
-                      width={30}
-                      height={30}
+                      width={20}
                     />
                   </Table.Cell>
-                  <Table.Cell>{name}</Table.Cell>
-                  <Table.Cell>{matches}</Table.Cell>
-                  <Table.Cell>{won}</Table.Cell>
-                  <Table.Cell>{drawn}</Table.Cell>
-                  <Table.Cell>{lost}</Table.Cell>
-                  <Table.Cell>{goals_scored}</Table.Cell>
-                  <Table.Cell>{goals_conceded}</Table.Cell>
-                  <Table.Cell>{goal_diff}</Table.Cell>
-                  <Table.Cell><b>{points}</b></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 14, fontWeight: "bold" }}>{name}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }}>{matches}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }}>{won}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }}>{drawn}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }}>{lost}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }}>{goals_scored}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }}>{goals_conceded}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 12 }}>{goal_diff}</Text></Table.Cell>
+                  <Table.Cell><Text css={{ fontSize: 14, fontWeight: "bold" }}>{points}</Text></Table.Cell>
                 </Table.Row>
               )
             })

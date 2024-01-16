@@ -1,7 +1,6 @@
 import { Table, Image, Text } from '@nextui-org/react';
 
 const MatchesTable = (data) => {
-  console.log('From matches: ', data.matches)
   const matches = data?.matches ? Object.entries(data?.matches.slice(0, 9)).filter(match => match[1].round === data?.round) : null;
   const columns = [
     {
