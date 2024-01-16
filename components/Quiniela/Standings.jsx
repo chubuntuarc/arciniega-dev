@@ -1,7 +1,7 @@
 import { Table, Image, Text } from '@nextui-org/react';
 
 const StangingsTable = (data) => {
-  const standings = data?.standings ? Object.entries(data.standings.slice(18, 35)) : null;
+  const standings = data?.standings ? Object.entries(data.standings.slice(18, 36)) : null;
   const columns = [
     {
       key: "rank",

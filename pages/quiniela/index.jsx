@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Grid, Card, Col, Text } from "@nextui-org/react";
 import MatchesTable from "../../components/Quiniela/MatchesTable";
 import StangingsTable from "../../components/Quiniela/Standings";
+import PlayersTable from "../../components/Quiniela/Players";
 
 function Quiniela() {
   const [apiMatchesData, setApiMatchesData] = useState();
@@ -58,6 +59,22 @@ function Quiniela() {
           <Card.Body>
             {matches && <MatchesTable matches={matches} round={round} />}
           </Card.Body>
+        </Card>
+      </Grid>
+      <Grid md={8} xs={12}>
+        <Card>
+          <Card.Header>
+            <Col>
+              <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
+                Participantes
+              </Text>
+            </Col>
+          </Card.Header>
+          <Card.Divider />
+          <Card.Body>
+            {standings && <PlayersTable />}
+          </Card.Body>
+
         </Card>
       </Grid>
       <Grid md={8} xs={12}>
