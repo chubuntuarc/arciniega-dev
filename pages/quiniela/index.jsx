@@ -56,7 +56,7 @@ function Quiniela() {
           </Card.Header>
           <Card.Divider />
           <Card.Body>
-            {matches && <MatchesTable matches={matches} />}
+            {matches && <MatchesTable matches={matches} round={round} />}
           </Card.Body>
         </Card>
       </Grid>
