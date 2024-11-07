@@ -1,4 +1,4 @@
-// pages/_document.js
+// pages/_document.tsx
 
 import React from "react";
 import Document, {
@@ -22,7 +22,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
+        <Head>
+          <link rel="icon" href="/arc_favicon.png" />
+          {CssBaseline.flush()}
+        </Head>
         <body>
           <Main />
           <NextScript />
