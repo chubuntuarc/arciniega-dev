@@ -40,6 +40,20 @@ const companiesData = {
     thumbnail: "/wfr.png",
     url: "https://www.wefeedraw.com/",
   },
+  NEC: {
+    altText: "New Era Caps card",
+    description: "Shopify store frontend development.",
+    name: "New Era Caps",
+    thumbnail: "/nec.png",
+    url: "https://www.neweracap.com/",
+  },
+  Gladiator: {
+    altText: "Gladiator by Whirlpool card",
+    description: "Shopify store frontend development.",
+    name: "Gladiator by Whirlpool",
+    thumbnail: "/gladiator.png",
+    url: "https://www.gladiatorgarageworks.com/",
+  },
 };
 
 const PortfolioCard = ({company}: Props) => {

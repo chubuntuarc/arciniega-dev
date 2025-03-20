@@ -1,0 +1,81 @@
+.container {
+  background: #000;
+  min-height: 100vh;
+  padding: 4rem;
+  padding-top: 8rem;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: #000;
+  z-index: 1000;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.siteName {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.headingWrapper {
+  margin-bottom: 2rem;
+}
+
+.gradientText {
+  font-size: 80px;
+  line-height: 1;
+  font-weight: bold;
+  background: linear-gradient(90deg, #9333FF -5%, #FF6B6B 50%, #FFB86C 105%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.whiteText {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.subheading {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+  background: #000;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-image: linear-gradient(#000, #000), 
+                    linear-gradient(90deg, #9333FF -5%, #FF6B6B 50%, #FFB86C 105%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+} 
