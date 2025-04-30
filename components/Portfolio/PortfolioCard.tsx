@@ -54,6 +54,13 @@ const companiesData = {
     thumbnail: "/gladiator.png",
     url: "https://www.gladiatorgarageworks.com/",
   },
+  MM: {
+    altText: "MM card",
+    description: "JavaScript Products Catalog",
+    name: "MM",
+    thumbnail: "/mym.png",
+    url: "/portfolio/mm",
+  },
 };
 
 const PortfolioCard = ({company}: Props) => {
