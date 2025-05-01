@@ -54,6 +54,13 @@ const companiesData = {
     thumbnail: "/gladiator.png",
     url: "https://www.gladiatorgarageworks.com/",
   },
+  Valkiria: {
+    altText: "Valkiria card",
+    description: "Web Development Company Landing Page.",
+    name: "Valkiria Tech",
+    thumbnail: "/valkiria/bg-header.jpg",
+    url: "/portfolio/valkiria",
+  },
   MM: {
     altText: "MM card",
     description: "JavaScript Products Catalog",

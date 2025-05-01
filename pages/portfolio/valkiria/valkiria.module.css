@@ -1,0 +1,581 @@
+.valkiriaPage {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.valkiriaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.valkiriaHeader .logoContainer img {
+  display: block;
+}
+
+.scrolledHeader {
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.langButton {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 0.5;
+}
+
+.valkiriaHeader .valkiriaNav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.valkiriaHeader .valkiriaNav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.valkiriaHeader .valkiriaNav a:hover {
+  color: #007bff;
+}
+
+.valkiriaHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px;
+  text-align: center;
+  background-image: url('/valkiria/bg-header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.valkiriaHero .heroContent img {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.valkiriaHero .heroContent p {
+  font-size: 1.2rem;
+  color: #e1e3e5;
+}
+
+.aboutSection {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.aboutSection h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.aboutSection .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.aboutSection .subtitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #e74c3c;
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featureItem {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.featureItem i {
+  font-size: 2.5rem;
+  color: #555;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.featureItem h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.featureItem p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutSection h2 {
+    font-size: 2rem;
+  }
+
+  .aboutSection .subtitle {
+    font-size: 1rem;
+  }
+
+  .featuresContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .featureItem {
+    max-width: 300px;
+  }
+}
+
+/* Styles for the Banner Section */
+.bannerSection {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.bannerSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.bannerSection .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.bannerSection .subtitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #e74c3c;
+}
+
+
+.growthSection {
+  padding: 6rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.growthSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/valkiria/growth.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.growthContent {
+  position: relative;
+  z-index: 1;
+}
+
+.growthContent p {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 800px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.highlight {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.growthContent p .highlight:last-of-type {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.growthContent p .highlight:last-of-type::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-bottom: 2px solid #e74c3c;
+  border-top: 2px solid #e74c3c;
+  box-sizing: border-box;
+}
+
+
+/* Responsive adjustments for Growth Section */
+@media (max-width: 768px) {
+  .growthSection {
+    padding: 4rem 1rem;
+    min-height: 40vh;
+  }
+
+  .growthContent p {
+    font-size: 1.8rem;
+  }
+
+  .growthContent p .highlight:last-of-type {
+    padding-bottom: 6px;
+  }
+
+  .growthContent p .highlight:last-of-type::after {
+     height: 3px;
+     border-width: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .growthContent p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Services Section Styles */
+.servicesSection {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.servicesSection h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.servicesSection h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  border-top: 2px solid #e74c3c;
+  border-bottom: 2px solid #e74c3c;
+  box-sizing: border-box;
+}
+
+.servicesSection .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.servicesSection .subtitle::after {
+  display: none;
+}
+
+.servicesColumns {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.serviceColumn {
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+}
+
+.serviceColumn h3 {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.serviceColumn ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.serviceColumn li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for Services Section */
+@media (max-width: 768px) {
+  .servicesSection h2 {
+    font-size: 2rem;
+  }
+
+  .servicesSection .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .servicesColumns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .serviceColumn {
+    max-width: 350px;
+    text-align: left;
+  }
+
+   .serviceColumn ul {
+     padding-left: 30px;
+   }
+}
+
+@media (max-width: 480px) {
+   .serviceColumn h3 {
+     font-size: 1.2rem;
+   }
+   .serviceColumn li {
+     font-size: 0.95rem;
+   }
+}
+
+/* Contact Section Styles */
+.contactSection {
+  padding: 4rem 2rem 8rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.contactSection h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Red underline for the title */
+.contactSection h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background-color: #e74c3c;
+}
+
+.contactSection .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+/* Remove default ::after from subtitle if it inherited */
+.contactSection .subtitle::after {
+  display: none;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="tel"],
+.contactForm textarea {
+  width: 100%;
+  padding: 0.8rem 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #555;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.contactForm input[type="text"]::placeholder,
+.contactForm input[type="email"]::placeholder,
+.contactForm input[type="tel"]::placeholder,
+.contactForm textarea::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm input[type="tel"]:focus,
+.contactForm textarea:focus {
+  border-bottom-color: #333;
+}
+
+.contactForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submitButton {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #333;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 1rem;
+  float: left;
+}
+
+.submitButton:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 3rem 1rem;
+  }
+
+  .contactSection h2 {
+    font-size: 2rem;
+  }
+
+  .contactSection .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactForm {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection h2 {
+    font-size: 1.8rem;
+  }
+   .contactSection .subtitle {
+    font-size: 0.9rem;
+  }
+  .submitButton {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+}
+
+.detailsButton {
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  border: none;
+  border-radius: 5%;
+  bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: white;
+  display: flex;
+  height: 48px;
+  padding: 6px;
+  position: fixed;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  right: 20px;
+  z-index: 1001;
+  justify-content: center;
+  text-align: center;
+}
+
+.detailsButton:hover {
+  background: linear-gradient(90deg, #5a0fb1 0%, #1e63d8 100%);
+  transform: translateY(-2px) scale(1.05); /* Slightly lift and scale on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhance shadow on hover */
+}

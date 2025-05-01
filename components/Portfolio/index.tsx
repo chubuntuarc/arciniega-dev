@@ -35,6 +35,9 @@ const Portfolio = () => {
         <PortfolioCard company="WFR" />
       </Grid>
       <Grid sm={6}>
+        <PortfolioCard company="Valkiria" />
+      </Grid>
+      <Grid sm={6}>
         <PortfolioCard company="MM" />
       </Grid>
     </Grid.Container>
