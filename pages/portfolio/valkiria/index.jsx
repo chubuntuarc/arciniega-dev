@@ -337,7 +337,7 @@ function ValkiriaPage() {
           content={
               <>
                 <p>
-                    This project is a responsive landing page for "Valkiria Tech", a local software development company.
+                    This project is a responsive landing page for &quot;Valkiria Tech&quot;, a local software development company.
                     It showcases services, features, and provides a contact form. Originally built in 2015, it was later updated.
                 </p>
                 <br />
