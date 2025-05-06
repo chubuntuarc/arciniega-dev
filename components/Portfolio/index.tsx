@@ -13,37 +13,37 @@ const Portfolio = () => {
           My work
         </Text>
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="SWF" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="Vite" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="Trends" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="NEC" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="Gladiator" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="Eddi" />
       </Grid>
-      <Grid sm={6} xs={12}>
+      <Grid sm={4} xs={12}>
         <PortfolioCard company="Flex" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="FITB" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="WFR" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="Valkiria" />
       </Grid>
-      <Grid sm={6}>
+      <Grid sm={4}>
         <PortfolioCard company="MM" />
       </Grid>
     </Grid.Container>
