@@ -9,6 +9,8 @@ import historicDataByDay from "../../../utils/historic-data";
 import webSocketClient from "../../../utils/websocket";
 import Table from "../../../components/table";
 import Graph from "../../../components/graph";
+import Head from "next/head";
+import Modal from "../../../components/Modal";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("");
@@ -17,6 +19,7 @@ export default function Home() {
   const socket = useMemo(() => webSocketClient(), []);
   const [socket_data, setSocketData] = useState(null);
   const [historic_data_by_day, setHistoricDataByDay] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     pairsCatalogueData().then((data) => {
@@ -63,6 +66,11 @@ export default function Home() {
   }, [socket_data, activeTab, pair_data]);
 
   return (
+    <>
+      <Head>
+        <title>Trends Project</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
     <div className={styles.container}>
       <div className={styles.content}>
         <CurrencyTabs
@@ -70,6 +78,9 @@ export default function Home() {
           activeTab={activeTab}
           onTabChange={setActiveTab}
         />
+        <button onClick={() => setIsModalOpen(true)} className={styles.detailsButton}>
+          Project Details
+        </button>
         <div>
           {pair_data &&
             historic_data_by_day &&
@@ -120,5 +131,47 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Project Details: Currency Trends Dashboard"
+        repo_url="https://github.com/chubuntuarc/front-end-challenge"
+        year="2025"
+        content={
+            <>
+              <p>
+                  This project is a dynamic dashboard displaying real-time and historical currency pair exchange rates.
+                  It fetches data from simulated APIs and uses WebSockets for live updates.
+              </p>
+              <br />
+              <div>
+                <hr style={{ border: '1px solid #ddd', width: '100%' }} />
+                <br />
+                <h4>Technologies Used:</h4>
+                <p>Next.js (React Framework)</p>
+                <p>React (with Hooks: useState, useEffect, useMemo)</p>
+                <p>JavaScript (ES6+)</p>
+                <p>WebSockets (for real-time data)</p>
+                <p>Chart.js (via react-chartjs-2 for graph)</p>
+                <p>CSS Modules (for styling)</p>
+                <p>HTML5</p>
+                <br />
+                <h4>Main Features:</h4>
+                <p>Tab-based navigation for different currency pairs.</p>
+                <p>Real-time exchange rate updates via WebSocket.</p>
+                <p>Display of historical data (high, low, open, close) in tables.</p>
+                <p>Interactive graph visualizing historical price trends.</p>
+                <p>Asynchronous data fetching for pair details and history.</p>
+                <p>Responsive layout elements.</p>
+                <br />
+                <h4>Challenges and Learnings:</h4>
+                <p>
+                  Managing WebSocket connections effectively within React's lifecycle using `useEffect` and `useMemo`. Handling multiple asynchronous data streams (initial pair data, historical data, WebSocket updates) and ensuring state consistency. Structuring data appropriately for both tabular display and chart visualization. Implementing client-side routing and state management for the active currency pair.
+                </p>
+              </div>
+            </>
+        }
+    />
+    </>
   );
 }
