@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import CurrencyTabs from "./components/currency-tabs";
-import CurrencyBanner from "./components/currency-banner";
+import CurrencyTabs from "../../../components/currency-tabs";
+import CurrencyBanner from "../../../components/currency-banner";
 import styles from "./page.module.css";
-import { pairData, pairsCatalogueData } from "./utils/pairs";
-import historicDataByDay from "./utils/historic-data";
-import webSocketClient from "./utils/websocket";
-import Table from "./components/table";
-import Graph from "./components/graph";
+import { pairData, pairsCatalogueData } from "../../../utils/pairs";
+import historicDataByDay from "../../../utils/historic-data";
+import webSocketClient from "../../../utils/websocket";
+import Table from "../../../components/table";
+import Graph from "../../../components/graph";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("");
