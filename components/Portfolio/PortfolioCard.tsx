@@ -68,6 +68,14 @@ const companiesData = {
     thumbnail: "/mym.png",
     url: "/portfolio/mm",
   },
+  Trends: {
+    altText: "Trends card",
+    description:
+      "Next.js GUI that allows a user to visualize currency prices, exchange rates, and trends for several currency pairs.",
+    name: "Trends",
+    thumbnail: "/trends.png",
+    url: "/portfolio/trends",
+  },
 };
 
 const PortfolioCard = ({company}: Props) => {

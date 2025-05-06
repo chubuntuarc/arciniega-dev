@@ -1,0 +1,79 @@
+.bannerContainer {
+  background-color: #000000;
+  border: 1px solid #7B7B7B;
+  color: #ffffff;
+  margin-top: 16px;
+  font-family: monospace;
+  padding: 10px 0;
+}
+
+.currencyPair {
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+.highRate, .lowRate, .timestamp {
+  color: #fff;
+}
+
+.rateTable {
+  border-collapse: collapse;
+  font-size: 14px;
+  width: 100%;
+}
+
+.rateTable th {
+  color: #909090;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.rateTable th,
+.rateTable td {
+  font-family: 'Roboto', sans-serif;
+  padding: 2px 8px;
+  text-align: right;
+}
+
+.rateTable td {
+  text-align: right;
+}
+
+.rateTable th:first-child {
+  border-bottom: 1px solid #ffffff;
+}
+
+.rateTable th:first-child,
+.rateTable td:first-child {
+  text-align: left;
+}
+
+.rateTablePositive {
+  color: var(--positive-color);
+}
+
+.rateTableNegative {
+  color: var(--negative-color);
+}
+
+.rateTablePositive th:first-child,
+.rateTablePositive td:first-child {
+  color: #fff;
+  border-left: 4px solid var(--positive-color);
+}
+
+.rateTableNegative th:first-child,
+.rateTableNegative td:first-child {
+  color: #fff;
+  border-left: 4px solid var(--negative-color);
+}
+
+.rateTable th:nth-child(3),
+.rateTable td:nth-child(3),
+.rateTable th:nth-child(4),
+.rateTable td:nth-child(4),
+.rateTable th:nth-child(5),
+.rateTable td:nth-child(5) {
+  border-left: 1px solid #7B7B7B;
+}

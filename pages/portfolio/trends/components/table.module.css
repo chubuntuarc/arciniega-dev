@@ -1,0 +1,94 @@
+.tableContainer {
+  background-color: #202837;
+  border-radius: 8px;
+  flex-grow: 1;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .tableContainer {
+    width: 50%;
+  }
+}
+
+.tableTitle {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 1rem;
+}
+
+.table {
+  background-color: #0a0a0a;
+  border-collapse: collapse;
+  width: 100%;
+  display: table;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tableBody {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.tableHeader {
+  background-color: #2D3748;
+  border-bottom: none;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.tableRow {
+  display: table-row;
+  border-bottom: 1px solid #222;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.tableRow:hover {
+  background-color: #1a1a1a;
+}
+
+.tableCell {
+  border-bottom: none;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.loadMoreButton {
+  padding: 0.5rem 1rem;
+  background-color: #202837;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.loadMoreButton:hover {
+  background-color: #1a1a1a;
+}
+
+.positive {
+  color: var(--positive-color);
+}
+
+.negative {
+  color: var(--negative-color);
+}

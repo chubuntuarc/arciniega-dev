@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  gap: 6px;
+}
+
+.tab {
+  background-color: #14161f;
+  border: none;
+  color: #8f96a3;
+  cursor: pointer;
+  min-height: 50px;
+  min-width: 120px;
+  padding: 8px 16px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  
+  .tab {
+    flex: 1;
+    min-width: auto;
+  }
+}
+
+.tab:hover {
+  background-color: #202837;
+  color: #a7aeb8;
+}
+
+.activeTab {
+  background-color: #2D3748;
+  border-top: 2px solid #007bff;
+  color: #ffffff;
+  font-weight: 500;
+}
