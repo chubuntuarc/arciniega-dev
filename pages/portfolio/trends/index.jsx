@@ -166,7 +166,7 @@ export default function Home() {
                 <br />
                 <h4>Challenges and Learnings:</h4>
                 <p>
-                  Managing WebSocket connections effectively within React's lifecycle using `useEffect` and `useMemo`. Handling multiple asynchronous data streams (initial pair data, historical data, WebSocket updates) and ensuring state consistency. Structuring data appropriately for both tabular display and chart visualization. Implementing client-side routing and state management for the active currency pair.
+                  Managing WebSocket connections effectively within React&apos;s lifecycle using `useEffect` and `useMemo`. Handling multiple asynchronous data streams (initial pair data, historical data, WebSocket updates) and ensuring state consistency. Structuring data appropriately for both tabular display and chart visualization. Implementing client-side routing and state management for the active currency pair.
                 </p>
               </div>
             </>

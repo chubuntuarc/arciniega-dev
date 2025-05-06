@@ -23,7 +23,7 @@ export default function ShopifyVite() {
       <div className={styles.cardContainer}>
         <div className={styles.card}>
           <Image
-            src="/vite.png" // Replace with your actual image path
+            src="/vite.png"
             alt="Initial Setup Screenshot"
             className={styles.cardImage}
             width={500}
@@ -43,7 +43,7 @@ export default function ShopifyVite() {
 
         <div className={styles.card}>
           <Image
-            src="/code.png" // Replace with your actual image path
+            src="/code.png"
             alt="React Component Screenshot"
             className={styles.cardImage}
             width={500}
@@ -53,14 +53,14 @@ export default function ShopifyVite() {
           <p className={styles.cardText}>
             Developed the new minicart component using ReactJS. Focused on state
             management (we have a custom state component called cartStore) to handle cart items,
-            quantities, and totals dynamically fetched from Shopify's AJAX API.
+            quantities, and totals dynamically fetched from Shopify&apos;s AJAX API.
           </p>
         </div>
 
         {/* Card 3: Theme Integration */}
         <div className={styles.card}>
           <Image
-            src="/minicart.png" // Replace with your actual image path
+            src="/minicart.png"
             alt="Theme Integration Screenshot"
             className={styles.cardImage}
             width={500}
@@ -70,7 +70,7 @@ export default function ShopifyVite() {
           <p className={styles.cardText}>
             Integrated the compiled React application into the Shopify theme using
             snippets and section schema. Ensured the React component mounts correctly
-            and interacts seamlessly with the existing theme's structure and styles.
+            and interacts seamlessly with the existing theme&apos;s structure and styles.
           </p>
           <p className={styles.cardText}>Visit the <a href="https://www.solawoodflowers.com/" className={styles.cardLink}>Sola Wood Flowers</a> store to see the minicart in action.</p>
         </div>
