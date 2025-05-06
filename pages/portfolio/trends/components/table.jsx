@@ -2,13 +2,13 @@ import styles from './table.module.css';
 import React from 'react';
 
 const Table = ({ title, data }) => {
+  // Add state for number of items to show
+  const [visibleItems, setVisibleItems] = React.useState(5);
+
   // Early return if no data
   if (!data || data.length === 0) {
     return null;
   }
-
-  // Add state for number of items to show
-  const [visibleItems, setVisibleItems] = React.useState(5);
 
   // Get headers from the first data object
   const headers = Object.keys(data[0]);

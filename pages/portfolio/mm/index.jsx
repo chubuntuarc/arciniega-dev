@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef, useMemo } from 'react';
 import HTMLFlipBook from 'react-pageflip'; // Importar el componente
 import Modal from '../../../components/Modal'; // Import the new Modal component
+import Image from 'next/image'; // Import the next/image component
 
 const TOTAL_PAGES = 10; // Mantienes el total de páginas
 
@@ -12,15 +13,14 @@ const Page = React.memo(React.forwardRef(({ pageNumber }, ref) => {
 
     return (
         <div className="page" ref={ref} style={styles.page}>
-            <img
+            <Image
                 src={getImagePath(pageNumber)}
                 alt={`Catalog Page ${pageNumber}`}
-                style={styles.catalogImage}
+                layout="fill"
+                objectFit="contain"
                 onError={(e) => {
                     e.target.onerror = null;
-                    e.target.alt = `Image ${pageNumber} not found`;
-                    console.error(`Failed to load image: ${e.target.src}`);
-                    // Podrías mostrar un placeholder aquí si la imagen falla
+                    console.error(`Failed to load image: ${getImagePath(pageNumber)}`);
                 }}
             />
         </div>
@@ -258,17 +258,8 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff', // Fondo blanco para las páginas
-        // Quitar borde si el contenedor ya tiene sombra/borde
-        // border: '1px solid #eee',
         overflow: 'hidden',
-    },
-    catalogImage: {
-        display: 'block',
-        maxWidth: '100%',
-        maxHeight: '100%',
-        width: 'auto', // Mantiene la proporción
-        height: 'auto', // Mantiene la proporción
-        objectFit: 'contain', // Asegura que toda la imagen sea visible
+        position: 'relative',
     },
     navigation: {
         display: 'flex',
