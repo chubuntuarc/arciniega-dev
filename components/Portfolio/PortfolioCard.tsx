@@ -68,6 +68,13 @@ const companiesData = {
     thumbnail: "/mym.png",
     url: "/portfolio/mm",
   },
+  Vite: {
+    altText: "Vite card",
+    description: "Integration of Vite and React into a Shopify theme / no headless.",
+    name: "Shopify + Vite + React",
+    thumbnail: "/vite.png",
+    url: "/portfolio/shopify-vite",
+  },
   Trends: {
     altText: "Trends card",
     description:
