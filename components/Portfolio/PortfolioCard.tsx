@@ -70,7 +70,8 @@ const companiesData = {
   },
   Vite: {
     altText: "Vite card",
-    description: "Integration of Vite and React into a Shopify theme / no headless.",
+    description:
+      "Integration of Vite and React into a Shopify theme / no headless.",
     name: "Shopify + Vite + React",
     thumbnail: "/vite.png",
     url: "/portfolio/shopify-vite",
@@ -82,6 +83,13 @@ const companiesData = {
     name: "Trends",
     thumbnail: "/trends.png",
     url: "/portfolio/trends",
+  },
+  Monarca: {
+    altText: "Monarca card",
+    description: "Personal finance tracker - Work in progress.",
+    name: "Monarca",
+    thumbnail: "/monarca_logo.png",
+    url: "https://monarca-three.vercel.app/",
   },
 };
 
