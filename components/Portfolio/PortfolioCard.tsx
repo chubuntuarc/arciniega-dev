@@ -68,6 +68,13 @@ const companiesData = {
     thumbnail: "/mym.png",
     url: "/portfolio/mm",
   },
+  Comarca: {
+    altText: "Comarca card",
+    description: "Property Management System - Work in progress.",
+    name: "Comarca",
+    thumbnail: "/comarca.webp",
+    url: "https://comarca-phi.vercel.app/",
+  },
   Vite: {
     altText: "Vite card",
     description:
