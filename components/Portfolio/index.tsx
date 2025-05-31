@@ -14,6 +14,9 @@ const Portfolio = () => {
         </Text>
       </Grid>
       <Grid sm={4}>
+        <PortfolioCard company="Arco" />
+      </Grid>
+      <Grid sm={4}>
         <PortfolioCard company="SWF" />
       </Grid>
       <Grid sm={4}>

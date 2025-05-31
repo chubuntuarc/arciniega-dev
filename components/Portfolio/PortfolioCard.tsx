@@ -98,6 +98,13 @@ const companiesData = {
     thumbnail: "/monarca_logo.png",
     url: "https://monarca-three.vercel.app/",
   },
+  Arco: {
+    altText: "Arco - Cart Sync",
+    description: "Shopify App for syncing carts between devices.",
+    name: "Arco",
+    thumbnail: "/arco.png",
+    url: "https://arco-henna.vercel.app/",
+  },
 };
 
 const PortfolioCard = ({company}: Props) => {
