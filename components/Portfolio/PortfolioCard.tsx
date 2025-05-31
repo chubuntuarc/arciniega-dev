@@ -105,6 +105,13 @@ const companiesData = {
     thumbnail: "/arco.png",
     url: "https://arco-henna.vercel.app/",
   },
+  Rules: {
+    altText: "Discount Rules Engine",
+    description: "Shopify App for discount management.",
+    name: "Rules",
+    thumbnail: "/rules.webp",
+    url: "https://westmount.solutions/our-apps/",
+  },
 };
 
 const PortfolioCard = ({company}: Props) => {
