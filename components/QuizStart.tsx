@@ -38,7 +38,7 @@ export default function QuizStart({ onStart }: { onStart: () => void }) {
         </button>
         {/* Footer */}
         <div className={styles.quizFooter}>
-          <span>Solo 7 preguntas</span>
+          <span>Solo 8 preguntas</span>
           <span>•</span>
           <span>100% gratuito</span>
           <span>•</span>
