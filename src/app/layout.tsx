@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createTheme, NextUIProvider } from "@nextui-org/react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Jesus Arciniega | Software Engineer",
@@ -41,5 +42,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <NextUIProvider theme={theme}>{children}</NextUIProvider>;
+  return (
+    <NextUIProvider theme={theme}>
+      {/* Google Tag Manager */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-P3WSPPGBJD"
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P3WSPPGBJD');
+        `}
+      </Script>
+      {children}
+    </NextUIProvider>
+  );
 }
