@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -31,6 +31,12 @@ interface QuizStepsProps {
   updateQuizData: (field: keyof QuizData, value: any) => void;
   nextStep: () => void;
   prevStep: () => void;
+}
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
 }
 
 const QuizSteps = ({
@@ -512,6 +518,14 @@ const QuizSteps = ({
         return null;
     }
   };
+
+  useEffect(() => {
+    if (currentStep === 1 && typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "quiz_started", {
+        event_category: "Quiz",
+      });
+    }
+  }, [currentStep]);
 
   return (
     <div className={styles.quizBg}>

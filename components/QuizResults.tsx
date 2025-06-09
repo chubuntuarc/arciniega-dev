@@ -280,6 +280,17 @@ const QuizResults = ({ quizData, onRestart }: QuizResultsProps) => {
   const whatsappMsg = encodeURIComponent(quizSummary);
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
 
+  const handleWhatsappClick = () => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "whatsapp_cta_clicked", {
+        event_category: "Quiz",
+        solution_title: solutionDetails.title,
+        event_label: recommendation.solution,
+        value: recommendation.score,
+      });
+    }
+  };
+
   useEffect(() => {
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("event", "quiz_completed", {
@@ -708,6 +719,7 @@ const QuizResults = ({ quizData, onRestart }: QuizResultsProps) => {
                     maxWidth: window.innerWidth <= 700 ? '100%' : 260,
                     display: 'block',
                   }}
+                  onClick={handleWhatsappClick}
                 >
                   <button
                     className={styles.quizBtn}
