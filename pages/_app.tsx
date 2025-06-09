@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import { createTheme, NextUIProvider } from "@nextui-org/react";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const theme = createTheme({
@@ -33,9 +34,24 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
 
   return (
-    <NextUIProvider theme={theme}>
-      <Component {...pageProps} />
-    </NextUIProvider>
+    <>
+      {/* Google Tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-P3WSPPGBJD"
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P3WSPPGBJD');
+        `}
+      </Script>
+      <NextUIProvider theme={theme}>
+        <Component {...pageProps} />
+      </NextUIProvider>
+    </>
   );
 }
 

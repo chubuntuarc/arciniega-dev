@@ -12,10 +12,17 @@ import {
 import { Button } from "../components/ui/button";
 import { QuizData } from "../pages/quiz/index";
 import styles from "../pages/quiz/quiz.module.css";
+import { useEffect } from "react";
 
 interface QuizResultsProps {
   quizData: QuizData;
   onRestart: () => void;
+}
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
 }
 
 const QuizResults = ({ quizData, onRestart }: QuizResultsProps) => {
@@ -272,6 +279,21 @@ const QuizResults = ({ quizData, onRestart }: QuizResultsProps) => {
   ].join('\n');
   const whatsappMsg = encodeURIComponent(quizSummary);
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "quiz_completed", {
+        event_category: "Quiz",
+        event_label: recommendation.solution,
+        value: recommendation.score,
+        business_type: quizData.businessType,
+        main_goals: (quizData.mainGoals || []).join(", "),
+        budget: quizData.budget,
+        timeline: quizData.timeline,
+        technical_level: quizData.technicalLevel,
+      });
+    }
+  }, []);
 
   return (
     <div className={styles.quizBg}>
