@@ -284,6 +284,7 @@ const QuizResults = ({ quizData, onRestart }: QuizResultsProps) => {
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("event", "quiz_completed", {
         event_category: "Quiz",
+        solution_title: solutionDetails.title,
         event_label: recommendation.solution,
         value: recommendation.score,
         business_type: quizData.businessType,
