@@ -112,6 +112,13 @@ const companiesData = {
     thumbnail: "/rules.webp",
     url: "https://westmount.solutions/our-apps/",
   },
+  Marco: {
+    altText: "Marco - Poster Generator",
+    description: "Poster Generator",
+    name: "Marco",
+    thumbnail: "/marco.png",
+    url: "/poster",
+  },
 };
 
 const PortfolioCard = ({company}: Props) => {
