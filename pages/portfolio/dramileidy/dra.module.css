@@ -1,0 +1,735 @@
+.draBg {
+  min-height: 100vh;
+  width: 100vw;
+  background: radial-gradient(ellipse at 60% 0%, #3a2567 0%, #4b2c7a 60%, #2a1740 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 0;
+}
+
+.draContainer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.draTitle {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+  line-height: 1.08;
+}
+
+.draGradient {
+  background: linear-gradient(90deg, #7ecbff 10%, #b7aaff 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.draSubtitle {
+  color: #e0e6f0;
+  font-size: 1.18rem;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 700px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.draSubtitleAccent {
+  color: #7ecbff;
+  font-weight: 500;
+}
+
+.draTabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 40px;
+  justify-content: center;
+  background: rgba(120, 80, 180, 0.10);
+  border: 1.5px solid #b7aaff44;
+  border-radius: 2.5rem;
+  padding: 6px;
+  width: fit-content;
+  box-shadow: 0 2px 16px 0 #2a17400a;
+}
+
+.draTab, .draTabActiveAntes, .draTabActiveDespues {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 10px 32px;
+  border: none;
+  background: transparent;
+  color: #e0e0f0;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  outline: none;
+  box-shadow: none;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+.draTab {
+  color: #d0cbe6;
+  background: transparent;
+}
+.draTab .draTabIcon {
+  color: #b7aaff;
+}
+.draTabActiveAntes {
+  background: linear-gradient(90deg, #ff6a3a 0%, #ffb86c 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px 0 #ff6a3a22;
+  z-index: 1;
+}
+.draTabActiveAntes .draTabIcon {
+  color: #fff;
+}
+.draTabActiveDespues {
+  background: linear-gradient(90deg, #22e584 0%, #3ad29f 40%, #4bb0ff 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px 0 #3ad29f22;
+  z-index: 1;
+}
+.draTabActiveDespues .draTabIcon {
+  color: #fff;
+}
+.draTabIcon {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  transition: color 0.18s;
+}
+
+.draGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+.draCardLeft, .draCardRight {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.draCardLeft {
+  background: linear-gradient(120deg, #4b2c7a 80%, #3a2567 100%);
+  border-radius: 18px;
+  border: 1.5px solid #b97aff44;
+  box-shadow: 0 2px 24px 0 #2a174022;
+  padding: 24px 12px 18px 12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.draCardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.draList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.draList li {
+  position: relative;
+  padding-left: 22px;
+  color: #fff;
+  font-size: 1.05rem;
+  text-align: left;
+  line-height: 1.4;
+}
+.draList li:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ff4d4f;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+}
+.draPreviewBox {
+  background: linear-gradient(120deg, #181c23 80%, #232e3a 100%);
+  border-radius: 16px;
+  padding: 18px 8px 18px 8px;
+  box-shadow: 0 2px 24px 0 #2a174022;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  min-height: 180px;
+  justify-content: center;
+  border: 2px solid #b97aff22;
+  margin: 18px auto 0 auto;
+}
+.draPreviewImgWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0;
+  box-sizing: border-box;
+}
+.draPreviewImg {
+  border-radius: 12px;
+  box-shadow: 0 2px 16px 0 #0002;
+  max-width: 340px;
+  max-height: 180px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+  background: none;
+  margin-bottom: 0;
+}
+.draPreviewTitle {
+  color: #e0e6f0;
+  font-size: 1.13rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.draPreviewDesc {
+  color: #7c8ca0;
+  font-size: 1.01rem;
+  text-align: center;
+}
+.draNavBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 22px;
+  align-items: center;
+}
+.draNavBtn, .draNavBtnActive {
+  width: 100%;
+  max-width: 420px;
+  padding: 14px 0;
+  font-size: 1.08rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: 1.5px solid #b97aff44;
+  background: rgba(120, 80, 180, 0.10);
+  color: #e0e0f0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 1px 8px 0 #2a17400a;
+  text-align: center;
+}
+.draNavBtnActive {
+  background: linear-gradient(90deg, #7c5cff 0%, #b97aff 100%);
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 16px 0 #b97aff22;
+}
+@media (min-width: 601px) {
+  .draGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+  .draCardLeft, .draCardRight {
+    width: auto;
+    max-width: unset;
+  }
+  .draPreviewBox {
+    max-width: 540px;
+    padding: 24px 32px 24px 32px;
+    border-radius: 18px;
+  }
+  .draPreviewImg {
+    max-width: 95%;
+    max-height: 320px;
+    margin-bottom: 18px;
+  }
+  .draNavBtns {
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .draNavBtn, .draNavBtnActive {
+    width: auto;
+    padding: 12px 32px;
+    font-size: 1.08rem;
+    border-radius: 2.2rem;
+  }
+}
+
+.draPreviewBoxModern {
+  background: linear-gradient(120deg, #4b2c7a 80%, #3a2567 100%);
+  border-radius: 14px;
+  padding: 36px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  min-height: 160px;
+  justify-content: center;
+  box-shadow: 0 2px 24px 0 #3ad29f22;
+}
+.draPreviewIconModern {
+  background: linear-gradient(135deg, #3ad29f 60%, #4bb0ff 100%);
+  color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px 0 #3ad29f33;
+}
+
+.draListModern {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.draListModern li {
+  position: relative;
+  padding-left: 22px;
+  color: #eafffa;
+  font-size: 1.05rem;
+  text-align: left;
+  line-height: 1.4;
+}
+.draListModern li:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #3ad29f 60%, #4bb0ff 100%);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+}
+
+.draLangBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  background: rgba(30, 30, 40, 0.18);
+  color: #fff;
+  border: 1.5px solid #b97aff44;
+  border-radius: 2rem;
+  padding: 7px 22px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  outline: none;
+  box-shadow: 0 1px 8px 0 #2a17400a;
+}
+.draLangBtn:hover {
+  background: #7c5cff;
+  color: #fff;
+  border: 2px solid #fff;
+}
+@media (max-width: 600px) {
+  .draLangBtn {
+    top: 10px;
+    right: 10px;
+    padding: 6px 16px;
+    font-size: 0.98rem;
+  }
+}
+
+.draDetailsSection {
+  width: 100%;
+  max-width: 1100px;
+  margin: 48px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.draDetailsCard {
+  background: linear-gradient(120deg, #4b2c7a 80%, #3a2567 100%);
+  border-radius: 18px;
+  border: 1.5px solid #b97aff44;
+  box-shadow: 0 2px 24px 0 #2a174022;
+  padding: 32px 28px 28px 32px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.draDetailsTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.draDetailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.draDetailsList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 1.08rem;
+}
+.draDetailsIcon {
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 12px;
+  background: rgba(120, 80, 180, 0.10);
+  margin-right: 2px;
+}
+.draDetailsTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.draDetailsTags span {
+  background: #2a1740;
+  color: #e0e0f0;
+  border-radius: 12px;
+  padding: 4px 14px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.draDetailsListBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.draDetailsListBullets li {
+  position: relative;
+  padding-left: 22px;
+  color: #eafffa;
+  font-size: 1.08rem;
+  text-align: left;
+  line-height: 1.5;
+}
+.draDetailsListBullets li:before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: linear-gradient(135deg, #3ad29f 60%, #4bb0ff 100%);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+}
+@media (max-width: 900px) {
+  .draDetailsSection {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 32px auto 0 auto;
+  }
+  .draDetailsCard {
+    padding: 22px 10px 18px 10px;
+    border-radius: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .draDetailsSection {
+    margin: 18px auto 0 auto;
+    gap: 10px;
+  }
+  .draDetailsCard {
+    padding: 12px 2px 10px 2px;
+    border-radius: 10px;
+  }
+  .draDetailsTitle {
+    font-size: 1.08rem;
+    margin-bottom: 12px;
+  }
+  .draDetailsList li, .draDetailsListBullets li {
+    font-size: 0.98rem;
+  }
+  .draDetailsIcon {
+    font-size: 1.2rem;
+    min-width: 26px;
+    min-height: 26px;
+    border-radius: 8px;
+  }
+  .draDetailsTags span {
+    font-size: 0.91rem;
+    padding: 3px 8px;
+  }
+}
+
+.draFinalSection {
+  width: 100%;
+  max-width: 900px;
+  margin: 64px auto 0 auto;
+  background: linear-gradient(120deg, #4b2c7a 80%, #3a2567 100%);
+  border-radius: 28px;
+  border: 1.5px solid #b97aff44;
+  box-shadow: 0 2px 32px 0 #2a174022;
+  padding: 48px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.draFinalTitle {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  text-align: center;
+  line-height: 1.08;
+}
+.draFinalDesc {
+  color: #e0e0f0;
+  font-size: 1.18rem;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+.draFinalActions {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 32px;
+  width: 100%;
+  justify-content: center;
+}
+.draFinalBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #3ad29f 0%, #4bb0ff 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.13rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 14px 36px;
+  cursor: pointer;
+  box-shadow: 0 2px 16px 0 #3ad29f22;
+  transition: background 0.18s, box-shadow 0.18s;
+  text-decoration: none;
+}
+.draFinalBtn:hover {
+  background: linear-gradient(90deg, #4bb0ff 0%, #3ad29f 100%);
+  box-shadow: 0 4px 24px 0 #4bb0ff33;
+}
+.draFinalMetrics {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 32px;
+  margin-top: 8px;
+}
+.draFinalMetricCard {
+  background: rgba(30, 30, 40, 0.18);
+  border: 1.5px solid #b97aff33;
+  border-radius: 18px;
+  padding: 28px 32px 18px 32px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 8px 0 #2a17400a;
+}
+.draFinalMetricValue {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.draFinalMetricLabel {
+  color: #b0b0c0;
+  font-size: 1.08rem;
+  font-weight: 500;
+  text-align: center;
+}
+.draFinalCta {
+  background: rgba(120, 80, 180, 0.10);
+  border: 1.5px solid #b97aff44;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 18px 16px;
+  margin-top: 18px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 1px 8px 0 #2a17400a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.draFooter {
+  width: 100%;
+  text-align: center;
+  color: #b0b0c0;
+  font-size: 1rem;
+  margin: 48px 0 0 0;
+  padding-bottom: 32px;
+  margin-top: auto;
+}
+@media (max-width: 900px) {
+  .draFinalSection {
+    padding: 28px 8px 18px 8px;
+    border-radius: 18px;
+    margin: 32px auto 0 auto;
+  }
+  .draFinalTitle {
+    font-size: 1.5rem;
+  }
+  .draFinalDesc {
+    font-size: 1.01rem;
+  }
+  .draFinalMetrics {
+    gap: 10px;
+  }
+  .draFinalMetricCard {
+    padding: 18px 8px 10px 8px;
+    border-radius: 12px;
+    min-width: 90px;
+  }
+  .draFinalMetricValue {
+    font-size: 1.3rem;
+  }
+  .draFinalMetricLabel {
+    font-size: 0.98rem;
+  }
+  .draFinalCta {
+    font-size: 0.98rem;
+    padding: 10px 4px;
+    border-radius: 10px;
+  }
+  .draFooter {
+    font-size: 0.93rem;
+    margin: 24px 0 0 0;
+    padding-bottom: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .draFinalSection {
+    padding: 14px 2px 10px 2px;
+    border-radius: 10px;
+    margin: 18px auto 0 auto;
+  }
+  .draFinalTitle {
+    font-size: 1.08rem;
+  }
+  .draFinalDesc {
+    font-size: 0.89rem;
+  }
+  .draFinalMetrics {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .draFinalMetricCard {
+    padding: 10px 4px 6px 4px;
+    border-radius: 8px;
+    min-width: 0;
+  }
+  .draFinalMetricValue {
+    font-size: 1.01rem;
+  }
+  .draFinalMetricLabel {
+    font-size: 0.91rem;
+  }
+  .draFinalCta {
+    font-size: 0.91rem;
+    padding: 7px 2px;
+    border-radius: 7px;
+    gap: 7px;
+  }
+  .draFinalBtnWhatsapp {
+    padding: 8px 18px;
+    font-size: 0.98rem;
+  }
+  .draFooter {
+    font-size: 0.89rem;
+    margin: 12px 0 0 0;
+    padding-bottom: 10px;
+  }
+}
+
+.draFinalBtnWhatsapp {
+  display: inline-block;
+  background: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 12px 32px;
+  margin-left: 0;
+  margin-top: 0;
+  cursor: pointer;
+  box-shadow: 0 1px 8px 0 #128c7e22;
+  transition: background 0.18s, box-shadow 0.18s;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.draFinalBtnWhatsapp:hover {
+  background: linear-gradient(90deg, #128c7e 0%, #25d366 100%);
+  box-shadow: 0 2px 12px 0 #128c7e33;
+}

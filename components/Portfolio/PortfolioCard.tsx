@@ -119,6 +119,13 @@ const companiesData = {
     thumbnail: "/marco.png",
     url: "/poster",
   },
+  Dramileidy: {
+    altText: "Dramileidy card",
+    description: "Redesign of a esthetic doctor's website.",
+    name: "Dramileidy",
+    thumbnail: "/dra_main.png",
+    url: "/portfolio/dramileidy",
+  },
 };
 
 const PortfolioCard = ({company}: Props) => {
