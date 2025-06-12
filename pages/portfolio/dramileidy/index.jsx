@@ -3,6 +3,13 @@ import { Clock, Zap, Calendar, User, Globe, Code2 } from "lucide-react";
 import styles from "./dra.module.css";
 import Image from "next/image";
 
+// Función para enviar eventos a Google Analytics
+const handleGtagEvent = (eventName, eventParams) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', eventName, eventParams);
+  }
+};
+
 const content = {
   es: {
     title: <>Rediseño <span className={styles.draGradient}>Completo</span></>,
@@ -131,7 +138,10 @@ export default function Dramileidy() {
           </button>
           <button
             className={tab === "despues" ? styles.draTabActiveDespues : styles.draTab}
-            onClick={() => setTab("despues")}
+            onClick={() => {
+              setTab("despues");
+              handleGtagEvent('click', { event_category: 'Tab', event_label: 'After Tab' });
+            }}
           >
             <Zap className={styles.draTabIcon} /> {t.tabs[1]}
           </button>
@@ -259,6 +269,7 @@ export default function Dramileidy() {
             <a
               href="https://preview.dramileidy.com" target="_blank" rel="noopener noreferrer"
               className={styles.draFinalBtn}
+              onClick={() => handleGtagEvent('click', { event_category: 'Button', event_label: 'View Live Website' })}
             >
               <span>🔗</span> {lang === "es" ? "Ver Sitio Web Live" : "View Live Website"}
             </a>
@@ -271,6 +282,7 @@ export default function Dramileidy() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.draFinalBtnWhatsapp}
+                    onClick={() => handleGtagEvent('click', { event_category: 'Button', event_label: 'Send WhatsApp (ES)' })}
                   >Enviarme un WhatsApp</a>
                 </span>
               : <span>🚀 <b>Need a similar redesign?</b> <br />Contact me to transform your project{' '}
@@ -279,6 +291,7 @@ export default function Dramileidy() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.draFinalBtnWhatsapp}
+                    onClick={() => handleGtagEvent('click', { event_category: 'Button', event_label: 'Send WhatsApp (EN)' })}
                   >Send me a WhatsApp</a>
                 </span>}
           </div>
