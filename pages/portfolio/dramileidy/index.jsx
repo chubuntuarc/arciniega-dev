@@ -12,7 +12,7 @@ const handleGtagEvent = (eventName, eventParams) => {
 
 const content = {
   es: {
-    title: <>Rediseño <span className={styles.draGradient}>Completo</span></>,
+    title: <>Consigue <span className={styles.draGradient}>Más Clientes</span> con una <span className={styles.draGradient}>Web Profesional</span></>,
     subtitle: <>
       Una transformación completa que moderniza la experiencia del usuario<br />
       <span className={styles.draSubtitleAccent}>y optimiza el rendimiento al máximo</span>
@@ -62,7 +62,7 @@ const content = {
     },
   },
   en: {
-    title: <>Complete <span className={styles.draGradient}>Redesign</span></>,
+    title: <>Get <span className={styles.draGradient}>More Clients</span> with a <span className={styles.draGradient}>Professional Web</span></>,
     subtitle: <>
       A complete transformation that modernizes the user experience<br />
       <span className={styles.draSubtitleAccent}>and maximizes performance</span>
@@ -114,7 +114,7 @@ const content = {
 };
 
 export default function Dramileidy() {
-  const [tab, setTab] = useState("antes");
+  const [tab, setTab] = useState("despues");
   const [lang, setLang] = useState("es");
   const t = content[lang];
   return (
@@ -129,6 +129,13 @@ export default function Dramileidy() {
         </button>
         <h1 className={styles.draTitle}>{t.title}</h1>
         <p className={styles.draSubtitle}>{t.subtitle}</p>
+        <div className={styles.draSynopsisContainer}>
+          <p className={styles.draSynopsis}>
+            {lang === "es"
+              ? "La Dra. Mileidy tenía un sitio web lento y difícil de usar desde el móvil, lo que le hacía perder pacientes potenciales. Desarrollamos una nueva plataforma moderna y ultrarrápida que ahora sirve como su principal canal para captar nuevos clientes."
+              : "Dr. Mileidy had a slow and mobile-unfriendly website, causing her to lose potential patients. We developed a new modern and ultra-fast platform that now serves as her main channel for attracting new clients."}
+          </p>
+        </div>
         <div className={styles.draTabs}>
           <button
             className={tab === "antes" ? styles.draTabActiveAntes : styles.draTab}
@@ -271,12 +278,12 @@ export default function Dramileidy() {
               className={styles.draFinalBtn}
               onClick={() => handleGtagEvent('click', { event_category: 'Button', event_label: 'View Live Website' })}
             >
-              <span>🔗</span> {lang === "es" ? "Ver Sitio Web Live" : "View Live Website"}
+              <span>🔗</span> {lang === "es" ? "Ver Caso de Éxito" : "View Success Case"}
             </a>
           </div>
           <div className={styles.draFinalCta}>
             {lang === "es"
-              ? <span>🚀 <b>¿Necesitas un rediseño similar?</b> <br />Contáctame para transformar tu proyecto{' '}
+              ? <span>🚀 <b>¿Tienes un proyecto en mente?</b> <br />Escríbeme y te doy una asesoría gratuita{' '}
                   <a
                     href="https://wa.me/+526141561723?text=Hola%2C%20quiero%20un%20redise%C3%B1o%20web%20como%20el%20de%20Dra.%20Mileidy"
                     target="_blank"
@@ -285,7 +292,7 @@ export default function Dramileidy() {
                     onClick={() => handleGtagEvent('click', { event_category: 'Button', event_label: 'Send WhatsApp (ES)' })}
                   >Enviarme un WhatsApp</a>
                 </span>
-              : <span>🚀 <b>Need a similar redesign?</b> <br />Contact me to transform your project{' '}
+              : <span>🚀 <b>Do you have a project in mind?</b> <br />Write me and I&apos;ll give you a free 15-minute consultation.{' '}
                   <a
                     href="https://wa.me/+526141561723?text=Hi%2C%20I%20want%20a%20website%20redesign%20like%20Dra.%20Mileidy's%20project"
                     target="_blank"
