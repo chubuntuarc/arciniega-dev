@@ -101,7 +101,7 @@ const companiesData = {
   Arco: {
     altText: "Arco - Cart Sync",
     description: "Shopify App for syncing carts between devices.",
-    name: "Arco",
+    name: "Arco Cart Sync",
     thumbnail: "/arco.png",
     url: "https://arco-henna.vercel.app/",
   },
@@ -125,6 +125,13 @@ const companiesData = {
     name: "Dramileidy",
     thumbnail: "/dra_main.png",
     url: "/portfolio/dramileidy",
+  },
+  ArcoPlay: {
+    altText: "Arco Play card",
+    description: "Soccer Predictions App - Beta",
+    name: "Arco Play",
+    thumbnail: "/arcoplay_logo.png",
+    url: "http://arcoplay.net",
   },
 };
 

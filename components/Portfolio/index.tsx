@@ -6,18 +6,15 @@ const Portfolio = () => {
   return (
     <Grid.Container gap={2} justify="center" className={styles.container}>
       <Grid xs={12}>
-        <Text
-          h1
-          className={styles.title}
-        >
+        <Text h1 className={styles.title}>
           My work
         </Text>
       </Grid>
       <Grid sm={4}>
-        <PortfolioCard company="Arco" />
+        <PortfolioCard company="ArcoPlay" />
       </Grid>
       <Grid sm={4}>
-        <PortfolioCard company="Dramileidy" />
+        <PortfolioCard company="Arco" />
       </Grid>
       <Grid sm={4}>
         <PortfolioCard company="SWF" />
@@ -30,6 +27,9 @@ const Portfolio = () => {
       </Grid>
       <Grid sm={4}>
         <PortfolioCard company="Marco" />
+      </Grid>
+      <Grid sm={4}>
+        <PortfolioCard company="Dramileidy" />
       </Grid>
       <Grid sm={4}>
         <PortfolioCard company="Monarca" />
