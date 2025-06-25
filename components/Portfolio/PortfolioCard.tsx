@@ -130,7 +130,7 @@ const companiesData = {
     altText: "Arco Play card",
     description: "Soccer Predictions App - Beta",
     name: "Arco Play",
-    thumbnail: "/arcoplay.png",
+    thumbnail: "/arco_play.png",
     url: "http://arcoplay.net/landing",
   },
 };
