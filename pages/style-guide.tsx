@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './style-guide.module.css';
 import { Navbar, NavbarLink, NavbarAction } from '../components/ui/Navbar/Navbar';
+import Header from '../components/ui/Header/Header';
 
 function ThemeSwitch() {
   const [theme, setTheme] = useState('dark');
@@ -30,7 +31,7 @@ function ThemeSwitch() {
 }
 
 const links: NavbarLink[] = [
-  { label: 'arciniega.dev', href: '/', active: true },
+  { label: 'Home', href: '/', active: true },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -44,6 +45,12 @@ export default function StyleGuide() {
   return (
     <div className={styles.styleGuideRoot}>
       <Navbar logo={<img src="/arc_favicon.png" alt="SoRun" className={styles.navLogo} height={32} width={32} />} links={links}  />
+      <Header
+        title="Style Guide"
+        subtitle="Components and visual guidelines for arciniega.dev"
+        ctaLabel="Get Started"
+        onCtaClick={() => alert('Let\'s get started!')}
+      />
       <header className={styles.styleGuideHeader}>
         <div
           style={{
