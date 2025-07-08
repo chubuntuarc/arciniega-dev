@@ -11,10 +11,10 @@ const Portfolio = () => {
         </Text>
       </Grid>
       <Grid sm={4}>
-        <PortfolioCard company="ArcoPlay" />
+        <PortfolioCard company="Arco" />
       </Grid>
       <Grid sm={4}>
-        <PortfolioCard company="Arco" />
+        <PortfolioCard company="ArcoPlay" />
       </Grid>
       <Grid sm={4}>
         <PortfolioCard company="SWF" />
