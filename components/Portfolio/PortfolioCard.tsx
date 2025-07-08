@@ -103,7 +103,7 @@ const companiesData = {
     description: "Shopify App for syncing carts between devices.",
     name: "Arco Cart Sync",
     thumbnail: "/arco.png",
-    url: "https://arco-henna.vercel.app/",
+    url: "https://apps.shopify.com/arco-cart-sync",
   },
   Rules: {
     altText: "Discount Rules Engine",
