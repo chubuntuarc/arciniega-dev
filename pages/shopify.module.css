@@ -1,0 +1,774 @@
+/* Global Styles */
+.container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  background: #fff;
+}
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect width="1000" height="600" fill="%23FF6B35"/><rect x="0" y="500" width="1000" height="100" fill="%23E74C3C"/></svg>');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.shopifyHighlight {
+  color: #2D5A27;
+}
+
+.heroCta {
+  background: white;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.heroCta:hover {
+  background: #f0f0f0;
+}
+
+/* Trust Section */
+.trust {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.trustLogos {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+/* Introduction Section */
+.intro {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.introContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.introText h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+.introCta {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.introCta:hover {
+  background: #333;
+}
+
+/* Portfolio Grid */
+.portfolio, .portfolioDark {
+  padding: 4rem 2rem;
+}
+
+.portfolio {
+  background: white;
+}
+
+.portfolioDark {
+  background: #000;
+  color: white;
+}
+
+.portfolioGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolioCard {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.portfolioCard:hover {
+  transform: translateY(-5px);
+}
+
+.cardImage {
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cardText {
+  position: relative;
+  z-index: 2;
+}
+
+.cardLabel {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Target Audience Section */
+.targetAudience {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.audienceContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.audienceText h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+.audienceText p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.audienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.audienceCard {
+  text-align: center;
+}
+
+.audienceImage {
+  height: 200px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.audienceCard p {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Our Work Section */
+.ourWork {
+  padding: 4rem 2rem;
+  background: #000;
+  color: white;
+}
+
+.workContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.workLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.workHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+/* Forever Customers Section */
+.foreverCustomers {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.customersContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.customersContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.customersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.customerCard {
+  background: #2D5A27;
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.customerImage {
+  height: 200px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.customerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.customerCard p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Services Section */
+.services {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.servicesContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.serviceImage, .businessImage {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  height: 400px;
+  width: 100%;
+}
+
+.serviceText, .businessText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.serviceLabel, .businessLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2D5A27;
+}
+
+.serviceText h2, .businessText h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.serviceText p, .businessText p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.serviceCta, .businessCta {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+
+.serviceCta:hover, .businessCta:hover {
+  background: #333;
+}
+
+/* Business Care Section */
+.businessCare {
+  padding: 6rem 2rem;
+  background: #000;
+  color: white;
+}
+
+.businessContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.businessLabel {
+  color: white;
+}
+
+.businessText h2 {
+  color: white;
+}
+
+.businessText p {
+  color: #ccc;
+}
+
+.businessCta {
+  background: white;
+  color: black;
+}
+
+.businessCta:hover {
+  background: #f0f0f0;
+}
+
+/* Podcast Section */
+.podcast {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.podcastContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.podcastHeader {
+  margin-bottom: 3rem;
+}
+
+.podcastLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.podcastGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.podcastCard {
+  background: #2D5A27;
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+}
+
+.podcastImage {
+  height: 150px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.podcastCard h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.podcastCard h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.podcastCard p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.podcastNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navArrow {
+  background: none;
+  border: 2px solid #2D5A27;
+  color: #2D5A27;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.navArrow:hover {
+  background: #2D5A27;
+  color: white;
+}
+
+.viewAll {
+  background: #2D5A27;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.viewAll:hover {
+  background: #1e3f1a;
+}
+
+/* Testimonial Section */
+.testimonial {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.testimonialContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonialHeader {
+  margin-bottom: 3rem;
+}
+
+.testimonialLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.testimonialQuote {
+  max-width: 800px;
+}
+
+.testimonialQuote blockquote {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2D5A27;
+}
+
+.authorInfo h4 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.authorInfo p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.authorSignature {
+  width: 100px;
+  height: 40px;
+  background: #2D5A27;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #2D5A27 0%, #4A7C59 100%);
+  color: white;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaContent .ctaButton {
+  background: white;
+  color: #2D5A27;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ctaContent .ctaButton:hover {
+  background: #f0f0f0;
+}
+
+/* Footer */
+.footer {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2D5A27 0%, #8B5CF6 100%);
+  color: white;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+}
+
+.footerNewsletter h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.newsletterForm input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.newsletterForm button {
+  background: white;
+  color: #2D5A27;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletterForm button:hover {
+  background: #f0f0f0;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.footerLogo .logoIcon {
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+}
+
+.footerLinks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.linkColumn h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.linkColumn a {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.linkColumn a:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .servicesContent, .businessContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footerLinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .customersGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .audienceGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .podcastGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+  
+  .hero, .intro, .targetAudience, .services, .businessCare, .podcast, .testimonial, .ctaSection {
+    padding: 3rem 1rem;
+  }
+  
+  .portfolio, .portfolioDark, .ourWork, .foreverCustomers {
+    padding: 2rem 1rem;
+  }
+  
+  .footer {
+    padding: 2rem 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .introText h2, .audienceText h2, .workHeader h2, .customersContent h2, .serviceText h2, .businessText h2, .ctaContent h2 {
+    font-size: 1.8rem;
+  }
+} 
